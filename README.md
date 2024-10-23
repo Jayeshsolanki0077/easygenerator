@@ -34,11 +34,11 @@ Sign up and Sign in module with implementation of authentication mechanism
     npm install
 3. **Set up environment variables:**
 Create a .env file in the backend directory and add your environment variables. An example .env file:
-    *For the Node backend*
+## For the Node backend
     MONGODB_URI=your_database_uri
     JWT_SECRET_KEY=secret_key
 
-    *For the React frontend*
+## For the React frontend
     REACT_APP_PORT=3000
 4. **Run the backend server:**
     ```bash
