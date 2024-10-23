@@ -52,12 +52,11 @@ Create a .env file in the backend directory and add your environment variables. 
 
 ### Using Docker
 1.  Create a .env file in the backend directory and add your environment variables. An example .env file:
-    *For the Node backend*
-    ```bash
+## For the Node backend
     MONGODB_URI=your_database_uri
     JWT_SECRET_KEY=secret_key
 
-    *For the React frontend*
+## For the React frontend
     REACT_APP_PORT=3000
 2. Run docker compose command. 
     ```bash 
