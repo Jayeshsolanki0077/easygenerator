@@ -1,11 +1,18 @@
-version: '3.8'
+version: "3.8"
 
 services:
-  mongodb:
-    image: mongo
-    container_name: mongodb
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    env_file:
+      - ./frontend/.env
     ports:
-      - "27017:27017"
+      - "3000:3000"
+    volumes:
+      - ./frontend:/app/frontend
+    command: sh -c "npm install && npm start"
 
   backend:
     build:
@@ -15,24 +22,17 @@ services:
     env_file:
       - ./backend/.env
     ports:
-      - "8080:8080"
+      - "5000:5000"
     volumes:
       - ./backend:/app/backend
     depends_on:
       - mongodb
     environment:
       MONGO_URI: mongodb://mongodb:27017/easygenerator
-    command: sh -c "yarn install && yarn start:dev"
+    command: sh -c "npm install && npm start:dev"
 
-  ui:
-    build:
-      context: ./ui
-      dockerfile: Dockerfile
-    container_name: ui
-    env_file:
-      - ./ui/.env
+  mongodb:
+    image: mongo
+    container_name: mongodb
     ports:
-      - "3000:3000"
-    volumes:
-      - ./ui:/app/ui
-    command: sh -c "yarn install && yarn start"
+      - "27017:27017"
