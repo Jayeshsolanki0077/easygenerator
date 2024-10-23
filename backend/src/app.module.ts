@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
       imports: [ConfigModule],
       inject: [ConfigService],
       useFactory: async (config: ConfigService) => {
-        return { uri: 'mongodb+srv://admin:admin@cluster0.m9mg1.gcp.mongodb.net/easygenerator' };
+        return { uri: config.getOrThrow('MONGODB_URI') };
       },
     }),
     UsersModule,
