@@ -1,7 +1,11 @@
-# Project Name
+# Easygenerator
 
 ## Overview
 Sign up and Sign in module with implementation of authentication mechanism
+* React
+* Node.js (Nest js)
+* Mongodb
+* Tailwind css
 
 ## Table of Contents
 - [Requirements](#requirements)
