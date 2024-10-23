@@ -1,0 +1,2 @@
+# easygenerator
+Assignement for easygenerator
