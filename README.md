@@ -25,24 +25,20 @@ Sign up and Sign in module with implementation of authentication mechanism
    git clone XXXX.git
    cd XXXXX
 2. **Install dependencies:**
-    *For the Node backend*
-    ```bash
+## For the Node backend*
     cd backend
     npm install
 
-    *For the React frontend*
-    ```bash
+## For the React frontend
     cd ../frontend
     npm install
 3. **Set up environment variables:**
 Create a .env file in the backend directory and add your environment variables. An example .env file:
     *For the Node backend*
-    ```bash
     MONGODB_URI=your_database_uri
     JWT_SECRET_KEY=secret_key
 
     *For the React frontend*
-    ```bash
     REACT_APP_PORT=3000
 4. **Run the backend server:**
     ```bash
@@ -62,7 +58,6 @@ Create a .env file in the backend directory and add your environment variables. 
     JWT_SECRET_KEY=secret_key
 
     *For the React frontend*
-    ```bash
     REACT_APP_PORT=3000
 2. Run docker compose command. 
     ```bash 
